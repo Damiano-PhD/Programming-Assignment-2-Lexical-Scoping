@@ -1,0 +1,13 @@
+makeCacheMatrix <- function(x = matrix()) {
+  inv <- NULL
+  a <- function(M) inv <<- M
+  b <- function() inv
+  list(a=a,b=b)
+}
+
+cacheSolve <- function(x, ...) {
+  inv <- x$b()
+  inv <- solve(data)
+  x$a(inv)
+  inv      
+}
